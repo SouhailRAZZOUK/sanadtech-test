@@ -1,0 +1,38 @@
+{
+  "name": "sanadtech-test",
+  "version": "1.0.0",
+  "description": "SanadTech Test",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --progress --colors --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SouhailRAZZOUK/sanadtech-test.git"
+  },
+  "keywords": [
+    "react",
+    "react-winjs",
+    "test"
+  ],
+  "author": "Souhail RAZZOUK <souhail.razzouk@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SouhailRAZZOUK/sanadtech-test/issues"
+  },
+  "homepage": "https://github.com/SouhailRAZZOUK/sanadtech-test#readme",
+  "dependencies": {
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "axios": "^0.17.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-winjs": "^2.5.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.4.1",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.6.2"
+  }
+}
