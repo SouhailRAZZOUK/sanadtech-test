@@ -947,35 +947,8 @@ module.exports = Cancel;
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
 var ReactDOM = __webpack_require__(10);
-var DataGrid_1 = __webpack_require__(11);
-var axios_1 = __webpack_require__(16);
-var headersMap = { firstName: "First Name", lastName: "Last Name", coutry: "Country", email: "Email" };
-var App = React.createClass({
-    getInitialState: function () {
-        return {
-            users: []
-        };
-    },
-    componentDidMount: function () {
-        var _this = this;
-        this.serverRequest = axios_1.default
-            .get("http://sanadtech-lab.appspot.com/")
-            .then(function (result) {
-            console.log(result);
-            _this.setState({
-                users: result.data
-            });
-        });
-    },
-    componentWillUnmount: function () {
-        this.serverRequest.abort();
-    },
-    render: function () {
-        return (React.createElement("div", null,
-            React.createElement(DataGrid_1.DataGrid, { data: this.state.users, headersMap: headersMap })));
-    }
-});
-ReactDOM.render(React.createElement(App, null), document.getElementById("app-root"));
+var App_1 = __webpack_require__(35);
+ReactDOM.render(React.createElement(App_1.App, null), document.getElementById("app-root"));
 
 
 /***/ }),
@@ -2064,6 +2037,61 @@ module.exports = function spread(callback) {
     return callback.apply(null, arr);
   };
 };
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(1);
+var DataGrid_1 = __webpack_require__(11);
+var axios_1 = __webpack_require__(16);
+var App = /** @class */ (function (_super) {
+    __extends(App, _super);
+    function App(props, context) {
+        var _this = _super.call(this, props, context) || this;
+        _this.state = {
+            users: [],
+            headersMap: {}
+        };
+        return _this;
+    }
+    App.prototype.componentDidMount = function () {
+        var self = this;
+        this.serverRequest = axios_1.default
+            .get("http://sanadtech-lab.appspot.com/")
+            .then(function (result) {
+            console.log(result);
+            self.setState({
+                users: result.data,
+                headersMap: { firstName: "First Name", lastName: "Last Name", coutry: "Country", email: "Email" }
+            });
+        });
+    };
+    App.prototype.componentWillUnmount = function () {
+        this.serverRequest.abort();
+    };
+    App.prototype.render = function () {
+        return (React.createElement("main", null,
+            React.createElement(DataGrid_1.DataGrid, { data: this.state.users, headersMap: this.state.headersMap })));
+    };
+    return App;
+}(React.Component));
+exports.App = App;
+;
 
 
 /***/ })
