@@ -1,38 +1,51 @@
 {
-  "name": "sanadtech-test",
+  "name": "boilerplate",
   "version": "1.0.0",
-  "description": "SanadTech Test",
+  "description": "Small not opinionated react.js boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --progress --colors --watch",
+    "dev": "gulp dev",
+    "release": "gulp release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SouhailRAZZOUK/sanadtech-test.git"
-  },
-  "keywords": [
-    "react",
-    "react-winjs",
-    "test"
-  ],
-  "author": "Souhail RAZZOUK <souhail.razzouk@hotmail.com>",
-  "license": "ISC",
+  "author": "Yannick Fricke",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SouhailRAZZOUK/sanadtech-test/issues"
+    "url": "https://github.com/YannickFricke/gulp-webpack-typescript-react-sass-boilerplate/issues"
   },
-  "homepage": "https://github.com/SouhailRAZZOUK/sanadtech-test#readme",
-  "dependencies": {
-    "@types/react": "^16.0.31",
-    "@types/react-dom": "^16.0.3",
-    "axios": "^0.17.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-winjs": "^2.5.0"
-  },
+  "homepage": "https://github.com/YannickFricke/gulp-webpack-typescript-react-sass-boilerplate/",
   "devDependencies": {
-    "awesome-typescript-loader": "^3.4.1",
-    "source-map-loader": "^0.2.3",
-    "typescript": "^2.6.2"
+    "@types/node": "^8.0.50",
+    "@types/react": "^16.0.20",
+    "@types/react-dom": "^16.0.2",
+    "@types/react-redux": "^5.0.12",
+    "@types/react-router-dom": "^4.2.0",
+    "awesome-typescript-loader": "^3.3.0",
+    "browser-sync": "^2.18.13",
+    "classnames": "^2.2.5",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-if": "^2.0.2",
+    "gulp-ignore": "^2.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "object-assign": "^4.1.1",
+    "pump": "^1.0.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1",
+    "webpack-stream": "^4.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "react-winjs": "^2.5.0"
   }
 }

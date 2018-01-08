@@ -1,0 +1,27 @@
+.search-box {
+  font-family: segoe-ui, Segoe UI, Segoe WP, Helvetica Neue, Helvetica, sans-serif;  
+  .search-box__filters {
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    flex-wrap: wrap;
+  }
+  .search-box__filters__add-filter-btn {
+    background: #215ad5;
+    text-align: center;
+    min-width: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: inline;
+    line-height: 1.2;
+    padding: 5px 2px;
+    margin: 5px;
+    &:after {
+      content: "+";
+      font-size: 21px;
+      line-height: 0.8;
+    }
+  }
+}

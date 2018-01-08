@@ -1,0 +1,42 @@
+.filter {
+  display: flex;
+  min-width: 50px;
+  background: rgb(167, 167, 167);
+  margin: 5px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  min-width: 50px;
+  background: #a7a7a7;
+  border-radius: 4px;
+  span {
+    height: 100%;
+    padding: 5px 7px;
+    box-sizing: border-box;
+    &:hover {
+      background: #818080;
+    }
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+  .filter__filter-by {
+    border-right: 1px solid rgb(95, 92, 92);
+  }
+  .filter__query {
+    border-left: 1px solid rgb(95, 92, 92);
+  }
+  .filter__delete-btn {
+    background: rgb(228, 9, 9);
+    &:hover {
+      background: rgb(245, 12, 12);
+    }
+    &:after {
+      content: "\2716";
+      font-size: 15px;
+      line-height: 0.8em;
+    }
+  }
+}
