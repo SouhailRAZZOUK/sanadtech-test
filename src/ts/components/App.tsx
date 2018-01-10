@@ -40,7 +40,7 @@ export class App extends React.Component {
   render() {
     return (
       <main>
-        <SearchBox />
+        <SearchBox filters={[]}/>
         <DataGrid data={this.state.users} headersMap={this.state.headersMap} />
       </main>
     )
